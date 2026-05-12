@@ -4,7 +4,7 @@
     "description": "Name of the extension"
   },
   "extensionDescription": {
-    "message": "View today's exchange rates and convert currencies",
+    "message": "Real-time exchange rate converter for quick multi-currency amount conversion",
     "description": "Description of the extension"
   },
   "popupTitle": {

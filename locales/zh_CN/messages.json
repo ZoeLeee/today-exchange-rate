@@ -4,7 +4,7 @@
     "description": "扩展名称"
   },
   "extensionDescription": {
-    "message": "实时查看今天的汇率和转换",
+    "message": "实时汇率换算工具，输入金额即可快速查看多币种转换结果",
     "description": "扩展描述"
   },
   "popupTitle": {
