@@ -1,0 +1,74 @@
+{
+  "extensionName": {
+    "message": "Today exchange rate",
+    "description": "Name of the extension"
+  },
+  "extensionDescription": {
+    "message": "View today's exchange rates and convert currencies",
+    "description": "Description of the extension"
+  },
+  "popupTitle": {
+    "message": "Exchange Rate Converter",
+    "description": "Popup title"
+  },
+  "amountLabel": {
+    "message": "Amount",
+    "description": "Amount input label"
+  },
+  "amountPlaceholder": {
+    "message": "Enter amount",
+    "description": "Amount input placeholder"
+  },
+  "baseCurrencyLabel": {
+    "message": "Base Currency",
+    "description": "Base currency selector label"
+  },
+  "rateDateLabel": {
+    "message": "Rate Date",
+    "description": "Exchange rate date label"
+  },
+  "refreshRates": {
+    "message": "Refresh Rates",
+    "description": "Refresh rates button"
+  },
+  "refreshingRates": {
+    "message": "Refreshing...",
+    "description": "Refresh button loading text"
+  },
+  "loading": {
+    "message": "Loading...",
+    "description": "General loading text"
+  },
+  "conversionResultsLabel": {
+    "message": "Conversion Results",
+    "description": "Converted currencies section label"
+  },
+  "noTargetCurrencies": {
+    "message": "No target currencies. Please add one.",
+    "description": "Empty state for target currencies"
+  },
+  "deleteButton": {
+    "message": "Delete",
+    "description": "Delete target currency button"
+  },
+  "addCurrencyLabel": {
+    "message": "Add Currency",
+    "description": "Add currency selector label"
+  },
+  "selectCurrencyPlaceholder": {
+    "message": "-- Select a currency to add --",
+    "description": "Add currency selector placeholder"
+  },
+  "dataSourceNotice": {
+    "message": "Data source: @fawazahmed0/currency-api · For reference only. Actual settlement depends on your bank/payment provider.",
+    "description": "Data source and disclaimer"
+  },
+  "errorLoadCurrencyList": {
+    "message": "Failed to load currency list",
+    "description": "Error when currency list fails to load"
+  },
+  "errorLoadExchangeRates": {
+    "message": "Failed to load exchange rates",
+    "description": "Error when exchange rates fail to load"
+  }
+}

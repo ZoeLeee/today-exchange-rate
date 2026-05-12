@@ -1,0 +1,74 @@
+{
+  "extensionName": {
+    "message": "今日汇率",
+    "description": "扩展名称"
+  },
+  "extensionDescription": {
+    "message": "实时查看今天的汇率和转换",
+    "description": "扩展描述"
+  },
+  "popupTitle": {
+    "message": "汇率转换",
+    "description": "弹窗标题"
+  },
+  "amountLabel": {
+    "message": "金额",
+    "description": "金额输入标签"
+  },
+  "amountPlaceholder": {
+    "message": "输入金额",
+    "description": "金额输入占位符"
+  },
+  "baseCurrencyLabel": {
+    "message": "主货币",
+    "description": "主货币选择标签"
+  },
+  "rateDateLabel": {
+    "message": "汇率日期",
+    "description": "汇率日期标签"
+  },
+  "refreshRates": {
+    "message": "刷新汇率",
+    "description": "刷新汇率按钮"
+  },
+  "refreshingRates": {
+    "message": "刷新中...",
+    "description": "刷新按钮加载文案"
+  },
+  "loading": {
+    "message": "加载中...",
+    "description": "通用加载文案"
+  },
+  "conversionResultsLabel": {
+    "message": "转换结果",
+    "description": "目标货币区域标签"
+  },
+  "noTargetCurrencies": {
+    "message": "无目标货币，请添加",
+    "description": "目标货币为空提示"
+  },
+  "deleteButton": {
+    "message": "删除",
+    "description": "删除目标货币按钮"
+  },
+  "addCurrencyLabel": {
+    "message": "添加货币",
+    "description": "添加货币选择标签"
+  },
+  "selectCurrencyPlaceholder": {
+    "message": "-- 选择要添加的货币 --",
+    "description": "添加货币占位选项"
+  },
+  "dataSourceNotice": {
+    "message": "数据来源: @fawazahmed0/currency-api · 仅供参考，实际结算以银行/支付平台为准",
+    "description": "数据来源与免责声明"
+  },
+  "errorLoadCurrencyList": {
+    "message": "加载货币列表失败",
+    "description": "货币列表加载失败提示"
+  },
+  "errorLoadExchangeRates": {
+    "message": "加载汇率失败",
+    "description": "汇率加载失败提示"
+  }
+}

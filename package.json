@@ -1,8 +1,8 @@
 {
   "name": "today-exchange-rate",
-  "displayName": "Today exchange rate",
+  "displayName": "__MSG_extensionName__",
   "version": "0.0.1",
-  "description": "实时查看今天的汇率和转换",
+  "description": "__MSG_extensionDescription__",
   "author": "zoelee0904@gmail.com",
   "scripts": {
     "dev": "plasmo dev",
@@ -24,6 +24,9 @@
     "typescript": "5.3.3"
   },
   "manifest": {
+    "default_locale": "en",
+    "name": "__MSG_extensionName__",
+    "description": "__MSG_extensionDescription__",
     "host_permissions": [
       "https://*/*"
     ]

@@ -16,6 +16,8 @@ const CURRENCIES_API =
 const CURRENCIES_API_FALLBACK =
   "https://latest.currency-api.pages.dev/v1/currencies.min.json"
 
+const t = (key: string) => globalThis.chrome?.i18n?.getMessage(key) || key
+
 function IndexPopup() {
   const [baseCurrency, setBaseCurrency] = useState("usd")
   const [amount, setAmount] = useState("1")
@@ -94,7 +96,7 @@ function IndexPopup() {
         setCurrenciesList(currencyCodes)
       } catch (err) {
         console.error("Failed to load currencies:", err)
-        setError("Failed to load currency list")
+        setError("errorLoadCurrencyList")
       }
     }
 
@@ -119,7 +121,7 @@ function IndexPopup() {
         setRateDate(typeof data.date === "string" ? data.date : "")
       } catch (err) {
         console.error("Failed to load exchange rates:", err)
-        setError("Failed to load exchange rates")
+        setError("errorLoadExchangeRates")
         setRates({})
         setRateDate("")
       } finally {
@@ -192,7 +194,7 @@ function IndexPopup() {
         borderRadius: "8px"
       }}>
       <h2 style={{ margin: "0 0 16px 0", fontSize: "18px", color: "#333" }}>
-        汇率转换
+        {t("popupTitle")}
       </h2>
 
       {error && (
@@ -205,7 +207,7 @@ function IndexPopup() {
             borderRadius: "4px",
             fontSize: "12px"
           }}>
-          {error}
+          {t(error)}
         </div>
       )}
 
@@ -226,13 +228,13 @@ function IndexPopup() {
               marginBottom: "4px",
               color: "#666"
             }}>
-            金额
+            {t("amountLabel")}
           </label>
           <input
             type="number"
             value={amount}
             onChange={handleAmountChange}
-            placeholder="输入金额"
+            placeholder={t("amountPlaceholder")}
             step="0.01"
             min="0"
             style={{
@@ -254,7 +256,7 @@ function IndexPopup() {
               marginBottom: "4px",
               color: "#666"
             }}>
-            主货币
+            {t("baseCurrencyLabel")}
           </label>
           <select
             value={baseCurrency}
@@ -284,7 +286,7 @@ function IndexPopup() {
             alignItems: "center"
           }}>
           <span style={{ fontSize: "12px", color: "#666" }}>
-            汇率日期: {rateDate || "-"}
+            {t("rateDateLabel")}: {rateDate || "-"}
           </span>
           <button
             onClick={handleRefreshRates}
@@ -298,7 +300,7 @@ function IndexPopup() {
               cursor: loading ? "not-allowed" : "pointer",
               fontSize: "12px"
             }}>
-            {loading ? "刷新中..." : "刷新汇率"}
+            {loading ? t("refreshingRates") : t("refreshRates")}
           </button>
         </div>
       </div>
@@ -312,7 +314,7 @@ function IndexPopup() {
             fontSize: "12px",
             marginBottom: "12px"
           }}>
-          加载中...
+          {t("loading")}
         </div>
       )}
 
@@ -333,12 +335,12 @@ function IndexPopup() {
             color: "#666",
             fontWeight: "bold"
           }}>
-          转换结果
+          {t("conversionResultsLabel")}
         </label>
 
         {targetCurrencies.length === 0 ? (
           <div style={{ fontSize: "12px", color: "#999" }}>
-            无目标货币，请添加
+            {t("noTargetCurrencies")}
           </div>
         ) : (
           <div>
@@ -385,7 +387,7 @@ function IndexPopup() {
                     fontSize: "12px",
                     fontWeight: "500"
                   }}>
-                  删除
+                  {t("deleteButton")}
                 </button>
               </div>
             ))}
@@ -408,7 +410,7 @@ function IndexPopup() {
             marginBottom: "8px",
             color: "#666"
           }}>
-          添加货币
+          {t("addCurrencyLabel")}
         </label>
         <select
           onChange={addTargetCurrency}
@@ -422,7 +424,7 @@ function IndexPopup() {
             boxSizing: "border-box",
             cursor: "pointer"
           }}>
-          <option value="">-- 选择要添加的货币 --</option>
+          <option value="">{t("selectCurrencyPlaceholder")}</option>
           {availableForAdd.map((curr) => (
             <option key={curr} value={curr}>
               {curr.toUpperCase()}
@@ -438,8 +440,7 @@ function IndexPopup() {
           marginTop: "12px",
           textAlign: "center"
         }}>
-        数据来源: @fawazahmed0/currency-api ·
-        仅供参考，实际结算以银行/支付平台为准
+        {t("dataSourceNotice")}
       </div>
     </div>
   )
